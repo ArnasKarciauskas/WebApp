@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<enquiries>
+<enquiry>
+<email>e.g. johnsmith@gmail.com</email>
+<name>e.g. John Smith</name>
+<textarea>Your message here</textarea>
+<promotional>y/n</promotional>
+</enquiry>
+
+</enquiries>

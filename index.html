@@ -1,0 +1,469 @@
+<!DOCTYPE hmtl>
+<html>
+	<head>
+		<title>
+			Event Booking
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		
+	<script>
+		function c_function(){
+			var x;
+				
+			if (confirm("If you wish to confirm your booking press : Ok \n\nIf you wish to cancel your booking press : Cancel") == true){
+				x = "Booking Confirmed";
+			}//end if
+				
+			else {
+				x = "Booking Cancelled";
+			}//end else
+				
+			document.getElementById("demo1").innerHTML = x; 
+				
+			}//end function
+	</script>
+		
+	<script>
+		function d_function(){
+			var x;
+				
+			if (confirm("If you wish to confirm your booking press : Ok \n\nIf you wish to cancel your booking press : Cancel") == true){
+				x = "Booking Confirmed";
+			}//end if
+				
+			else {
+				x = "Booking Cancelled";
+			}//end else
+				
+			document.getElementById("demo2").innerHTML = x; 
+				
+			}//end function
+	</script>
+		
+		
+	</head>
+	
+	
+	<body>
+	<div class="navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				Menu
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#bookings">Bookings</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron" id="home">
+		<div class="container">
+			<h1>Event Booking</h1>
+			<p>You can use this website to book ticekts for events at different venues in Dublin City.</p>
+			<p><a href="#bookings" target="_blank" class="btn btn-warning btn-lg">Book tickets!</a></p>
+		</div>
+	</div>
+	
+	<div class="outline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" id="about">
+				<h3 class="text-center">About</h3>
+				<p class="text-center">The company was created in 2017, it has since grown to be the most popular event booking website in the world, we are listed as number #5 as one of the most visited websites in the world, we have 80 million unique visitors every mont.We offer the purchase of tickets for events at Croke park and the 3 Arena in Dublin. Our goal as a company is to provide you with a 5 star customer service and the best overall experience possible, please do not hesitate to contact us with any questions or issues which may arise. Our helplines are open 24/7.</p>			
+			</div>			
+		</div>	
+	</div>
+	</div>
+	
+	<div class="outline2">
+	<div class="container">
+		<h3 class="text-center" id="bookings">Bookings</h3>
+		<hr/>
+		<div class="row">
+			<div class="col-md-6">
+				<img id="cp" src="images/cplogo.png" alt="crokepark" class="img-responsive center-block"/>											
+					<form method="post" action="php/booking.php">
+						<div class="form-group">
+						  <label for="event">Choose the event</label>
+						  <select class="custom-select" id="event" name="event">
+							  <option value = "worldcup">World Cup Dublin 2040 (€550)</option>
+							  <option value = "jb">Justin Bieber concert 2018 (€140)</option>
+							  <option value = "icehockey">Ice Hockey European Championship 2018 (€90)</option>	        
+						  </select>
+						 </div>
+						
+						  <div class="form-group">
+						  <label for="date">Choose your date</label>
+							  <select class="custom-select" id="date" name="date">
+								  <option value = "first">18/06/2040 World Cup</option>
+								  <option value = "second">04/07/2018 Justin Bieber Concert</option>
+								  <option value = "third">14/12/2018 Ice Hockey Championship</option>
+							  </select>
+						 </div>
+						   
+						<div class="form-group">
+						  <label for="persons">Amount of persons</label>
+						  <select class="custom-select" id="persons" name="persons">
+							  <option value = "1">1</option>
+							  <option value = "2">2</option>
+							  <option value = "3">3</option>	          
+							  <option value = "4">4</option>							            
+							  <option value = "5">5</option>
+							  <option value = "6">6</option>
+							  <option value = "7">7</option>
+							  <option value = "8">8</option>	          
+							  <option value = "9">9</option>							            
+							  <option value = "10">10</option>
+						  </select>
+						 </div>
+						 
+						  <div class="form-group">
+						  <label for="seat">Choose your seat</label>
+						  <select class="custom-select" id="seat" name="seat">
+							  <option value = "bseat">Basic (FREE)</option>
+							  <option value = "bronze">Bronze seats (€50)</option>
+							  <option value = "silver">Silver seats (€100)</option>
+							  <option value = "gold">Gold seats (€150)</option>
+						  </select>
+						 </div>  
+						 
+						 <div class="form-group">
+							<label for="fname">First name:</label><br/>
+							<input type = "text" id="fname" name="fname"/>
+						 </div>	
+						 <div class="form-group">
+							<label for="lname">Last name:</label><br/>
+							<input type = "text" id="lname" name="lname"/>
+						 </div>		
+						 <div class="form-group">
+							<label for="email">E-mail:</label><br/>
+							<input type = "email" id="bemail" name="bemail"/>
+						 </div>	
+						 
+						<label for="button6"></br> </label>
+						<input id="submit" name="submit" type="submit" value="Purchase" class="btn btn-primary">
+					</form>		
+			</div>
+			
+			<div class="col-md-6">				
+				<img id="tarena" src="images/tarenalogo.png" alt="tarena" class="img-responsive center-block"/>
+					<form method="post" action="php/booking.php">
+
+						<div class="form-group">
+						  <label for="event">Choose the event</label>
+						  <select class="custom-select" id="event" name="event">
+							  <option value = "tw">The Wanted 2017</option>
+							  <option value = "kw">Kanye West 2017</option>
+							  <option value = "em">Eminem 2018</option>	        
+						  </select>
+						 </div>
+						
+						  <div class="form-group">
+						  <label for="date">Choose your date</label>
+							  <select class="custom-select" id="date" name="date">
+								  <option value = "first">18/11/2017 The Wanted</option>
+								  <option value = "second">25/06/2018 Kanye West</option>
+								  <option value = "third">03/07/2018 Eminem</option>
+							  </select>
+						 </div>
+						   
+						<div class="form-group">
+						  <label for="persons">Amount of persons</label>
+						  <select class="custom-select" id="persons" name="persons">
+							  <option value = "1">1</option>
+							  <option value = "2">2</option>
+							  <option value = "3">3</option>	          
+							  <option value = "4">4</option>							            
+							  <option value = "5">5</option>
+							  <option value = "6">6</option>
+							  <option value = "7">7</option>
+							  <option value = "8">8</option>	          
+							  <option value = "9">9</option>							            
+							  <option value = "10">10</option>
+						  </select>
+						 </div>
+						 
+						  <div class="form-group">
+						  <label for="seat">Choose your seats</label>
+						  <select class="custom-select" id="seat" name="seat">
+							  <option value = "pink">Pink (€20)</option>
+							  <option value = "green">Green (€80)</option>
+							  <option value = "blue">Blue (€200)</option>
+						  </select>
+						 </div>
+
+						<div class="form-group">
+							<label for="fname">First name:</label><br/>
+							<input type = "text" id="fname" name="fname"/>
+						</div>	
+						<div class="form-group">
+							<label for="lname">Last name:</label><br/>
+							<input type = "text" id="lname" name="lname"/>
+						</div>		
+						<div class="form-group">
+							<label for="email">E-mail:</label><br/>
+							<input type = "email" id="bemail" name="bemail"/>
+						</div>							
+						 
+						<label for="button6"></br> </label>
+						<input id="submit" name="submit" type="submit" value="Purchase" class="btn btn-primary">
+					</form>				
+			</div>		
+		</div>
+	
+	</div>
+	</div>
+	
+	<div class="outline2">
+	<div class="container">
+		<hr/>
+		<div class="row">
+			<div class="col-md-6">
+				<img id="cp" src="images/rdslogo.jpg" alt="rds" class="img-responsive center-block"/>											
+					<form method="post" action="php/booking.php">
+						<div class="form-group">
+						  <label for="event">Choose the event</label>
+						  <select class="custom-select" id="event" name="event">
+							  <option value = "fashion">Rick Owens Fashion Show (€1300)</option>
+							  <option value = "dublinmarathon">Dublin Marathon Registration (FREE)</option>
+							  <option value = "dog">Dog beauty contest 2018 (€900)</option>	        
+						  </select>
+						 </div>
+						
+						  <div class="form-group">
+						  <label for="date">Choose your date</label>
+							  <select class="custom-select" id="date" name="date">
+								  <option value = "first">20/06/2017 Rick Owens Fashion Show</option>
+								  <option value = "second">24/06/2018 Dublin Marathon Registration</option>
+								  <option value = "third">01/03/2018 Dog Beauty Contest</option>
+							  </select>
+						 </div>
+						   
+						<div class="form-group">
+						  <label for="persons">Amount of persons</label>
+						  <select class="custom-select" id="persons" name="persons">
+							  <option value = "1">1</option>
+							  <option value = "2">2</option>
+							  <option value = "3">3</option>	          
+							  <option value = "4">4</option>							            
+							  <option value = "5">5</option>
+							  <option value = "6">6</option>
+							  <option value = "7">7</option>
+							  <option value = "8">8</option>	          
+							  <option value = "9">9</option>							            
+							  <option value = "10">10</option>
+						  </select>
+						 </div>					 
+						 
+						 <div class="form-group">
+							<label for="fname">First name:</label><br/>
+							<input type = "text" id="fname" name="fname"/>
+						 </div>	
+						 <div class="form-group">
+							<label for="lname">Last name:</label><br/>
+							<input type = "text" id="lname" name="lname"/>
+						 </div>		
+						 <div class="form-group">
+							<label for="email">E-mail:</label><br/>
+							<input type = "email" id="bemail" name="bemail"/>
+						 </div>	
+						 
+						<label for="button6"></br> </label>
+						<input id="submit" name="submit" type="submit" value="Purchase" class="btn btn-primary">
+					</form>		
+			</div>
+			
+			<div class="col-md-6">				
+				<img id="tarena" src="images/bordgais.jpeg" alt="bordgais" class="img-responsive center-block"/>
+					
+					<form method="post" action="php/booking.php">
+
+						<div class="form-group">
+						  <label for="event">Choose the event</label>
+						  <select class="custom-select" id="event" name="event">
+							  <option value = "rp">Robert Plant</option>
+							  <option value = "rw">Russell Watson</option>
+							  <option value = "sb">Sunset Boulevard</option>	        
+						  </select>
+						 </div>
+						
+						  <div class="form-group">
+						  <label for="date">Choose your date</label>
+							  <select class="custom-select" id="date" name="date">
+								  <option value = "first">02/12/2017 Robert Plant</option>
+								  <option value = "second">22/12/2017 Russell Watson</option>
+								  <option value = "third">12/12/2017 Sunset Boulevard</option>
+							  </select>
+						 </div>
+						   
+						<div class="form-group">
+						  <label for="persons">Amount of persons</label>
+						  <select class="custom-select" id="persons" name="persons">
+							  <option value = "1">1</option>
+							  <option value = "2">2</option>
+							  <option value = "3">3</option>	          
+							  <option value = "4">4</option>							            
+							  <option value = "5">5</option>
+							  <option value = "6">6</option>
+							  <option value = "7">7</option>
+							  <option value = "8">8</option>	          
+							  <option value = "9">9</option>							            
+							  <option value = "10">10</option>
+						  </select>
+						 </div>
+						 
+						  <div class="form-group">
+						  <label for="seat">Choose your seats</label>
+						  <select class="custom-select" id="seat" name="seat">
+							  <option value = "pink">Standing (FREE)</option>
+							  <option value = "green">Upper Level Seats (€50)</option>
+							  <option value = "blue">VIP(€250)</option>
+						  </select>
+						 </div>
+
+						<div class="form-group">
+							<label for="fname">First name:</label><br/>
+							<input type = "text" id="fname" name="fname"/>
+						</div>	
+						<div class="form-group">
+							<label for="lname">Last name:</label><br/>
+							<input type = "text" id="lname" name="lname"/>
+						</div>		
+						<div class="form-group">
+							<label for="email">E-mail:</label><br/>
+							<input type = "email" id="bemail" name="bemail"/>
+						</div>							
+						 
+						<label for="button6"></br> </label>
+						<input id="submit" name="submit" type="submit" value="Purchase" class="btn btn-primary">
+					</form>				
+			</div>		
+		</div>
+	
+	</div>
+	</div>
+	
+	<div class="container">
+		
+			<h3 class="text-center" id="contact">Contact Us</h3>
+			<hr/>
+			<form role="form" action="contact.php" method="post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" name="name" placeholder="e.g John Smith"/>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail:</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="e.g. johnsmith@gmail.com"/>				
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone No:</label>
+					<input type="text" class="form-control" id="phone" name="phone" placeholder="08XXXXXXXX"/>
+				</div>
+
+				<div class="form-group">
+					<label for="textarea">Message:</label>
+					<textarea class="form-control" name="message" id="message" placeholder="Enter your message"></textarea>
+				</div>
+			</form>
+			<label for="checkbox">Would you like us to send you our monthly newsletter?</label>
+			<br/>
+			<input type="checkbox" name="promotional"/> Yes
+			<br/>
+			<br/>
+			<button type="submit" class="btn btn-warning">Submit</button>
+			<br/>
+			<br/>
+	</div>
+	
+	<div class="outline2">
+	<div class="container">		
+		<h3 class="text-center" id="gallery">Gallery</h3>
+		<hr/>
+		<div class="col-md-3">
+			<h4 class="text-center">Croke Park</h4>
+			<img id="cp" src="images/cp.jpg" alt="cp" class="img-responsive center-block"/>
+			<br/>
+			<img id="cp2" src="images/cp2.jpg" alt="cp2" class="img-responsive center-block"/>
+			<br/>
+			<img id="cp3" src="images/cp3.jpg" alt="cp3" class="img-responsive center-block"/>
+			<br/>
+			<img id="cp4" src="images/cp4.jpg" alt="cp4" class="img-responsive center-block"/>
+			<br/>
+			<img id="cp5" src="images/cp5.jpg" alt="cp5" class="img-responsive center-block"/>				
+		</div>
+		<div class="col-md-3">	
+			<h4 class="text-center">3 Arena</h4>		
+			<img id="tarena" src="images/tarena.jpg" alt="tarena" class="img-responsive center-block"/>
+			<br/>
+			<img id="tarena2" src="images/tarena2.jpg" alt="tarena2" class="img-responsive center-block"/>
+			<br/>
+			<img id="tarena3" src="images/tarena3.jpg" alt="tarena3" class="img-responsive center-block"/>
+			<br/>
+			<img id="tarena4" src="images/tarena4.jpg" alt="tarena4" class="img-responsive center-block"/>		
+			<br/>
+			<img id="tarena5" src="images/tarena5.jpg" alt="tarena5" class="img-responsive center-block"/>		
+		</div>
+		<div class="col-md-3">		
+			<h4 class="text-center">RDS</h4>
+			<img id="rds" src="images/rds.jpg" alt="rds" class="img-responsive center-block"/>
+			<br/>
+			<img id="rds2" src="images/rds2.jpg" alt="rds2" class="img-responsive center-block"/>
+			<br/>
+			<img id="rds3" src="images/rds3.jpg" alt="rds3" class="img-responsive center-block"/>
+			<br/>
+			<img id="rds4" src="images/rds4.jpg" alt="rds4" class="img-responsive center-block"/>
+			<br/>
+			<img id="rds5" src="images/rds5.jpg" alt="rds5" class="img-responsive center-block"/>				
+		</div>		
+		<div class="col-md-3">	
+			<h4 class="text-center">Bord Gais Energy Theatre</h4>	
+			<img id="bg" src="images/bg.jpg" alt="bg" class="img-responsive center-block"/>
+			<br/>
+			<img id="bg2" src="images/bg2.jpg" alt="bg2" class="img-responsive center-block"/>
+			<br/>
+			<img id="bg3" src="images/bg3.jpg" alt="bg3" class="img-responsive center-block"/>
+			<br/>
+			<img id="bg4" src="images/bg4.jpg" alt="bg4" class="img-responsive center-block"/>	
+			<br/>
+			<img id="bg5" src="images/bg5.jpg" alt="bg5" class="img-responsive center-block"/>	
+		</div>
+	</div>
+	</div>
+	
+	<br/>
+	
+	<div class="outline3">
+		<div class="container">
+			<footer>&copy Group 20<br/></footer>		
+		</div>	
+	</div>
+		
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+			$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+	</script>
+	</body>
+</html>
